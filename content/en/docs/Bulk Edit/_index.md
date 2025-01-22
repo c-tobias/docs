@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2024-07-08
+date: 2025-01-22
 weight: 550
 ---
 
@@ -23,7 +23,7 @@ For more information about User records, see [Users \> View a user record](../us
 
 ## Permissions
 
-The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. Depending on how your library runs bulk edit jobs, users may also need permissions in other modules, such as Export Manager, Inventory, Users, and Settings. 
+The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app.  
 
 Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. 
 See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information. 
@@ -44,7 +44,7 @@ The Bulk edit app provides two methods for identifying records: **Identifier** a
 
 ### Identifier
 
-The **Identifier** approach allows the user to set criteria for the bulk edit by uploading a list of record identifiers from a .csv file. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and a *Something went wrong* message displays. 
+The **Identifier** approach allows the user to set criteria for the bulk edit by uploading a list of record identifiers from a .csv file. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and an error message, "_filename_ is formatted incorrectly. Please correct the formatting and upload the file again" displays.
 
 To set criteria for bulk edit using **Identifier**, follow these steps: 
 
