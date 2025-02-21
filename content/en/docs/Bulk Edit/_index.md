@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-01-28
+date: 2025-02-21
 weight: 550
 ---
 
@@ -26,6 +26,133 @@ The following are the permissions for the Bulk edit app:
 - **Bulk edit: In app - View inventory records** This permission allows the user to view a list of identified inventory records in the Bulk Edit app. 
 - **Bulk edit: Local - Edit user records** This permission allows the user to edit a field in multiple identified user records in the Bulk Edit app by uploading a .csv file.
 - **Bulk edit: Local - View user records** This permission allows the user to view a list of identified user records in Bulk Edit by uploading a .csv file.
+
+
+## Supported fields by record type
+
+In the Bulk edit app, the **Fields** available for building a query and displaying as column headings in the preview of matched records depend on the **Record type** selected for the bulk edit. See the appropriate table for more information about supported fields by record type:
+
+- [Inventory - holdings](#inventory---holdings)
+- [Inventory - instances](#inventory---instances)
+- [Inventory - items](#inventory---items)
+- [Users](#users)
+
+### Inventory - holdings
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: | 
+| *Holdings effective library code* | YES | YES |
+| *Holdings effective library ID* | NO | YES |
+| *Holdings effective library name* | YES | YES |
+| *Holdings effective location* | YES | YES |
+| *Holdings effective location ID* | NO | YES |
+| *Holdings HRID* | YES | YES |
+| *Holdings ID* | YES | YES |
+| *Holdings permanent location* | YES | YES | 
+| *Holdings permanent location ID* | NO | YES |
+| *Holdings statistical code ID list* | NO | YES |
+| *Holdings statistical code list* | NO | YES |
+| *Holdings suppress from discovery* | YES | YES |
+| *Holdings temporary location* | YES | YES |
+| *Holdings temporary location ID* | NO | YES |
+| *Instance UUID* | NO | YES | 
+
+### Inventory - instances
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *Instance statistical code list* | NO | YES | 
+| *Instance cataloged date* | YES | YES | 
+| *Instance contributor name type ID list* | NO | YES |
+| *Instance contributor name type list* | NO | YES |
+| *Instance contributor type ID list* | NO | YES |
+| *Instance contributor type list* | NO | YES |
+| *Instance created date* | YES | YES |
+| *Instance HRID* | YES | YES |
+| *Instance language* | NO | YES | 
+| *Instance mode of issuance* | YES | YES | 
+| *Instance mode of issuance ID* | NO | YES |
+| *Instance resource title* | YES | YES |
+| *Instance source* | YES | YES |
+| *Instance statistical code ID list* | NO | YES |
+| *Instance status* | YES | YES |
+| *Instance status ID* | NO | YES |
+| *Instance suppress from discovery* | YES | YES |
+| *Instance updated date* | YES | YES | 
+| *Instance UUID* | YES | YES | 
+
+### Inventory - items
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *Holdings ID* | YES | YES
+| *Instance created date* | YES | YES |
+| *Instance ID* | YES | YES | 
+| *Instance primary contributor* | YES | YES |
+| *Instance title* | YES | YES | 
+| *Instance updated date* | YES | YES |
+| *Item barcode* | YES | YES | 
+| *Item call number* | YES | YES |
+| *Item call number type ID* | NO | YES | 
+| *Item call number type name* | YES | YES |
+| *Item copy number* | NO | YES | 
+| *Item created date* | NO | YES | 
+| *Item effective call number* | NO | YES |
+| *IItem effective call number type ID* | NO | YES |
+| *Item effective call number type name* | NO | YES |
+| *Item effective library code* | YES | YES |
+| *Item effective library ID* | NO | YES |
+| *Item effective library name* | YES | YES |
+| *Item effective location ID* | NO | YES |
+| *Item effective location name* | YES | YES |
+| *Item hrid* | YES | YES |
+| *Item ID* | YES | YES |
+| *Item material ID* | NO | YES |
+| *Item material type* | YES | YES |
+| *Item permanent ID* | NO | YES |
+| *Item permanent location name* | YES | YES |
+| *Item statistical code ID list* | NO | YES |
+| *Item statistical code list* | NO | YES |
+| *Item status* | YES | YES | 
+| *Item temporary ID* | NO | YES |
+| *Item temporary location name* | YES | YES |
+| *Item updated date* | YES | YES |
+
+### Users
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *User active* | YES | YES |
+| *User address ID list* | NO | YES |
+| *User address list (line 1)* | NO | YES |
+| *User address list (line 2)* | NO | YES |
+| *User address type list* | NO | YES |
+| *User barcode* | YES | YES |
+| *User city list* | NO | YES |
+| *User country ID list* | NO | YES |
+| *User created date* | YES | YES |
+| *User date of birth* | YES | YES |
+| *User department ID list* | NO | YES |
+| *User department list* | NO | YES |
+| *User email* | YES | YES |
+| *User enrollment date* | YES | YES |
+| *User expiration date* | YES | YES |
+| *User external system ID* | YES | YES |
+| *User first name* | YES | YES |
+| *User ID* | YES | YES |
+| *User last name* | YES | YES |
+| *User middle name* | YES | YES |
+| *User mobile phone* | YES | YES |
+| *User patron group* | YES | YES |
+| *User patron group ID* | NO | YES |
+| *User phone* | YES | YES |
+| *User postal code list* | NO | YES |
+| *User preferred contact type* | YES | YES |
+| *User preferred first name* | YES | YES |
+| *User primary address* | YES | YES |
+| *User region list* | NO | YES |
+| *User updated date* | YES | YES |
+| *Username* | YES | YES |
 
 
 ## Identify records for bulk edit
@@ -54,7 +181,7 @@ To set criteria for bulk edit using **Identifier**:
 In the **Identifier** method, the **Record identifiers** available for selection are based on the selected **Record type**.
 
 | Record Type | Record identifier |
-| :-----: | :-----: |  
+| :----- | :----- |  
 | *Inventory - holdings* | Holdings UUIDs |
 | *Inventory - holdings* | Holdings HRIDs |
 | *Inventory - holdings* | Instance HRIDs |
@@ -74,57 +201,8 @@ In the **Identifier** method, the **Record identifiers** available for selection
 
 ### Query
 
-The **Query** function in the Bulk Edit app allows the user to build a query to identify records for bulk edit. The **Fields** available for building a query are based on the selected **Record type**.
+The **Query** function in the Bulk Edit app allows the user to build a query to identify records for bulk edit. The **Fields** available for building a query are based on the selected **Record type**. The **Fields** available for building a query are based on the selected **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information. 
 
-#### Fields by Record Type
-
-| Record type | Field |
-| :-----: | :-----: |
-| *Inventory - holdings* | Holdings effective library code|
-| *Inventory - holdings* | Holdings effective library name |
-| *Inventory - holdings* | Holdings effective location |
-| *Inventory - holdings* | Holdings HRID |
-| *Inventory - holdings* | Holdings ID |
-| *Inventory - holdings* | Holdings permanent location 
-| *Inventory - holdings* | Holdings suppress from discovery |
-| *Inventory - holdings* | Holdings temporary location | 
-| *Inventory - holdings* | Instance UUID |
-| *Inventory - instances* | Instance cataloged date |
-| *Inventory - instances* | Instance created date |
-| *Inventory - instances* | Instance HRID |
-| *Inventory - instances* | Instance mode of issuance |
-| *Inventory - instances* | Instance resource title |
-| *Inventory - instances* | Instance source |
-| *Inventory - instances* | Instance status |
-| *Inventory - instances* | Instance suppress from discovery |
-| *Inventory - instances* | Instance updated date |
-| *Inventory - instances* | Instance UUID |
-| *Inventory - items* | Holdings ID |
-| *Inventory - items* | Instance created date |
-| *Inventory - items* | Instance ID |
-| *Inventory - items* | Instance primary contributor |
-| *Inventory - items* | Instance title |
-| *Inventory - items* | Instance updated date |
-| *Inventory - items* | Item barcode |
-| *Inventory - items* | Item call number |
-| *Inventory - items* | Item call number type name |
-| *Inventory - items* | Item copy number |
-| *Inventory - items* | Item created date |
-| *Inventory - items* | Item effective library code |
-| *Inventory - items* | Item effective library name |
-| *Inventory - items* | Item effective location name |
-| *Inventory - items* | Item hrid |
-| *Inventory - items* | Item ID |
-| *Inventory - items* | Item material type |
-| *Inventory - items* | Item permanent location name |
-| *Inventory - items* | Item status |
-| *Inventory - items* | Item temporary location name |
-| *Inventory - items* | Item updated date |
-| *Users* | User preferred contact type |
-| *Users* | User preferred first name |
-| *Users* | User primary address |
-| *Users* | User updated date |
-| *Users* | Username|
 
 #### Build a query to identify records
 
@@ -139,7 +217,7 @@ To set criteria and identify records for bulk edit using the **Query** method:
    - Users
 
 3. Click the **Build query** button to open the **Build query** modal.
-4. Select a **Field** from the *Select field* drop-down menu or filter the selection by typing the field in the *Filter options list* text box. The **Fields** available for selection are based on the selected **Record type**. See [Fields by Record Type](#fields-by-record-type) for more information.  
+4. Select a **Field** from the *Select field* drop-down menu or filter the selection by typing the field in the *Filter options list* text box. The **Fields** available for selection are based on the selected **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information.  
 5. Select an **Operator** from the *Select operator* drop-down list. The **Operators** available for selection are based on the **Field**.
 
 | Operator | Meaning |
@@ -168,7 +246,7 @@ If the **Query** method is used to identify records for bulk edit, a **Test quer
 To add or remove **Field** columns in the preview pane:
 
 1. Click the **Actions** button.
-2. In the **Show columns** section of the Actions menu, check the box next to the name of the **Field** to include as a column heading in the preview.
+2. In the **Show columns** section of the Actions menu, check the box next to the name of the **Field** to include as a column heading in the preview. The **Fields** available to display as column headings depend on the record type selected for the bulk edit. See [Supported fields by record type](#supported-fields-by-record-type) for more information.
 3. Uncheck the box next to the name of the **Field** to remove the column from the preview.
 
 ### Download matched records
@@ -192,7 +270,7 @@ Depending on the web browser settings, the .csv file may be opened and/or saved.
 
 ## Bulk edit by record type
 
-### Inventory-holdings
+### Inventory - holdings
 
 In the Bulk edit app, the **Fields** that can be changed in Holdings records include:
 
@@ -816,7 +894,7 @@ To perform bulk edit on the matched **User** records using the **Start bulk edit
 | Options | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | **Email** | Find (pre-selected) | Text field | Replace with | Text field |
-| **Expiration date** | Replace with | Text field (MM/DD/YYYY or Calendar picker | - |
+| **Expiration date** | Replace with | Text field (MM/DD/YYYY or Calendar picker) | - | - |
 | **Patron group** | Replace with | Select Patron group | - | - | 
 
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
